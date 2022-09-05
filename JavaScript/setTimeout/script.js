@@ -1,28 +1,24 @@
-class Product {
-    constructor (name, price, quantity){
-        this.name = name;
-        this.price = price; 
-        this.quantity = quantity 
-    }
+function dizerOla(){
+    console.log("Ola");
+}
+setTimeout(dizerOla, 3000); 
 
-    total(){
-        return this.price * this.quantity; 
-    }
+// É uma função que executa uma função após um dado tempo em milissegundos.
 
-    add(amount){
-        this.quantity += amount; 
-    }
-
-    remove(amount) {
-        if (this.quantity >= amount){;
-            this.quantity = this.quantity - amount;
-            }
-    }
-
-    label() {
-        return "Dados:" + this.name + "," + this.price.toFixed(2);
-    }
+function dizerBomDia(nome){
+    console.log("Bom dia" + nome)
 }
 
-const p1 = new Product("Monitor", 800.0, 10); 
-const p2 = new Product("Mouse", 50.0, 4); 
+setTimeout(() => {
+    dizerBomDia(" Maria");
+    setTimeout(() => {
+        dizerBomDia(" Joao");
+        setTimeout(() => {
+            dizerBomDia(" Ana");
+        }, 2000);
+    }, 2000);
+}, 2000);
+
+
+console.log("A");
+console.log("B");
